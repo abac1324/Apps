@@ -414,6 +414,41 @@ kbd{font-family:inherit;font-size:10.5px;font-weight:600;color:var(--muted);back
 }
 @media(max-width:760px){.cmdk-bg{padding-top:7vh}.cmdk-f{display:none}}
 @media(hover:none){.sbsearch kbd,.cmdk-in kbd{display:none}}
+/* ---------- Equipos, avisos y herramientas de Abac (Hugo, 23-nov-2026) ---------- */
+.sel.auto{display:inline-block;vertical-align:middle;min-width:132px}
+.sel.auto .sel-btn{padding:5px 9px;font-size:12px;border-radius:9px}
+.rb{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.rb button{padding:7px 13px;font-size:12.5px;font-weight:600;cursor:pointer;color:var(--muted);border:0;background:transparent;font-family:inherit;transition:background var(--d2) var(--ease),color var(--d2)}
+.rb button.on{background:var(--navy);color:#fff}
+.rb button:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
+.acc-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.teamhead td{padding:16px 10px 6px;border-bottom:none}
+.teamhead .th{display:flex;align-items:center;gap:8px;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.teamhead .th .n{font-weight:500;letter-spacing:0;text-transform:none;color:var(--faint)}
+.sw.team{background:#6c77a3}
+.sw.team.on::after{transform:translateX(14px)}
+.legend{display:flex;gap:16px;font-size:11.5px;color:var(--muted);flex-wrap:wrap;margin-top:14px;font-weight:500}
+.legend i{display:inline-block;width:22px;height:12px;border-radius:999px;margin-right:6px;vertical-align:-2px}
+.teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.teams>*{min-width:0}
+.trow{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--line-2);font-size:13px}
+.trow:last-child{border-bottom:0}
+.trow .appicon{width:28px;height:28px;border-radius:8px;font-size:14px;flex:0 0 28px}
+.trow .appicon.ext{background:var(--info-soft);color:var(--navy)}
+.trow .tn{flex:1;min-width:0;color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.members{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line-2)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 4px;font-size:11.5px;font-weight:600;color:var(--ink)}
+.chip .avatar{width:20px;height:20px;font-size:8.5px}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.notices{display:flex;flex-direction:column;gap:10px;margin:-6px 0 22px}
+.notice{display:flex;align-items:flex-start;gap:12px;padding:12px 12px 12px 14px;border-radius:12px;background:var(--info-soft);color:var(--info);font-size:13px;line-height:1.5}
+.notice .ni{width:28px;height:28px;flex:0 0 28px;border-radius:8px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:15px}
+.notice .nt{flex:1;min-width:0;padding-top:3px}
+.notice .napp{font-weight:700;color:var(--navy);white-space:nowrap;margin-left:6px;text-decoration:underline;text-underline-offset:2px}
+.notice .icobtn{color:var(--info);margin:-1px -2px 0 0}
+.notice .icobtn:hover{background:#fff}
+.nmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.mycard .lt .ti{font-size:17px}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @media print{.sidebar,.topbar,.footer,.btn{display:none!important}}
 </style>
@@ -448,6 +483,8 @@ kbd{font-family:inherit;font-size:10.5px;font-weight:600;color:var(--muted);back
   <symbol id="i-sidebar-collapse" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16"/><path d="M15 10l-2 2l2 2"/></symbol>
   <symbol id="i-sidebar-expand" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16"/><path d="M14 10l2 2l-2 2"/></symbol>
   <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-speakerphone" viewBox="0 0 24 24"><path d="M18 8a3 3 0 0 1 0 6"/><path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5"/><path d="M12 8l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8"/></symbol>
+  <symbol id="i-users-group" viewBox="0 0 24 24"><circle cx="12" cy="13" r="2"/><path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"/><circle cx="17" cy="5" r="2"/><path d="M19 10h2a2 2 0 0 0 -2 -2h-2"/><circle cx="7" cy="5" r="2"/><path d="M3 10h2a2 2 0 0 0 2 -2h-2"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/></symbol>
   <symbol id="i-grip-vertical" viewBox="0 0 24 24"><circle cx="9" cy="5" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="19" r="1"/></symbol>
   <symbol id="i-help-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 17v.01"/><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"/></symbol>
@@ -460,9 +497,9 @@ kbd{font-family:inherit;font-size:10.5px;font-weight:600;color:var(--muted);back
     <div class="bsub">Portal de aplicaciones</div>
   </div>
   <button type="button" class="sbsearch" id="sbSearch" data-tip="Buscar (Ctrl K)" aria-label="Buscar una aplicación"><svg class="ti" aria-hidden="true"><use href="#i-search"/></svg><span class="nl">Buscar app…</span><kbd data-kbd>Ctrl K</kbd></button>
-  <nav class="nav" id="nav"><!--STATIC:nav--><a href="#" class="active" data-tab="home" data-tip="Inicio"><svg class="ti" aria-hidden="true"><use href="#i-layout-grid"/></svg><span class="nl">Inicio</span></a><div class="grp">Fijadas</div><div class="navhint">Marca con <svg class="ti" aria-hidden="true"><use href="#i-star"/></svg> las apps que más uses y te saldrán aquí, en el orden que quieras.</div><div class="grp">Administración</div><a href="#" class="" data-tab="access" data-tip="Accesos"><svg class="ti" aria-hidden="true"><use href="#i-shield-lock"/></svg><span class="nl">Accesos</span></a><a href="#" class="" data-tab="apps" data-tip="Catálogo de apps"><svg class="ti" aria-hidden="true"><use href="#i-apps"/></svg><span class="nl">Catálogo de apps</span></a><!--/STATIC:nav--></nav>
+  <nav class="nav" id="nav"><!--STATIC:nav--><a href="#" class="active" data-tab="home" data-tip="Inicio"><svg class="ti" aria-hidden="true"><use href="#i-layout-grid"/></svg><span class="nl">Inicio</span></a><div class="grp">Fijadas</div><div class="navhint">Marca con <svg class="ti" aria-hidden="true"><use href="#i-star"/></svg> las apps que más uses y te saldrán aquí, en el orden que quieras.</div><div class="grp">Administración</div><a href="#" class="" data-tab="access" data-tip="Accesos"><svg class="ti" aria-hidden="true"><use href="#i-shield-lock"/></svg><span class="nl">Accesos</span></a><a href="#" class="" data-tab="apps" data-tip="Catálogo de apps"><svg class="ti" aria-hidden="true"><use href="#i-apps"/></svg><span class="nl">Catálogo de apps</span></a><a href="#" class="" data-tab="notices" data-tip="Avisos"><svg class="ti" aria-hidden="true"><use href="#i-speakerphone"/></svg><span class="nl">Avisos</span></a><!--/STATIC:nav--></nav>
   <div class="sidelinks"><a href="#" id="lnkHelp" data-tip="Ayuda"><svg class="ti" aria-hidden="true"><use href="#i-help-circle"/></svg><span class="nl">Ayuda</span></a></div>
-  <div class="userbox" id="userbox"><!--STATIC:userbox--><label for="viewer">Usuario · ver como</label><div class="uc"><div class="uc-av" data-tip="Hugo Mengual">HM</div><div><div class="uc-name">Hugo Mengual</div><div class="uc-role">Administrador</div></div></div><select id="viewer"><option value="hugo.mengual@abaccapital.com" data-av="HM" data-sub="Administrador" selected>Hugo Mengual</option><option value="laia.bosch@abaccapital.com" data-av="LB" data-sub="2 aplicaciones">Laia Bosch</option><option value="marc.trias@abaccapital.com" data-av="MT" data-sub="3 aplicaciones">Marc Trias</option><option value="clara.ferran@abaccapital.com" data-av="CF" data-sub="2 aplicaciones">Clara Ferran</option><option value="oriol.puig@abaccapital.com" data-av="OP" data-sub="1 aplicación">Oriol Puig</option><option value="nuria.codina@abaccapital.com" data-av="NC" data-sub="2 aplicaciones">Núria Codina</option><option value="persona.nueva@abaccapital.com" data-av="PN" data-sub="Sin aplicaciones">Persona nueva</option></select><div class="role"><span class="pill navy">Admin</span><button class="btn sm ghost" id="logoutBtn" type="button"><svg class="ti" aria-hidden="true"><use href="#i-logout"/></svg> Salir</button></div><!--/STATIC:userbox--></div>
+  <div class="userbox" id="userbox"><!--STATIC:userbox--><label for="viewer">Usuario · ver como</label><div class="uc"><div class="uc-av" data-tip="Hugo Mengual">HM</div><div><div class="uc-name">Hugo Mengual</div><div class="uc-role">Administrador</div></div></div><select id="viewer"><option value="hugo.mengual@abaccapital.com" data-av="HM" data-sub="Administrador" selected>Hugo Mengual</option><option value="laia.bosch@abaccapital.com" data-av="LB" data-sub="Nest · 6 apps">Laia Bosch</option><option value="marc.trias@abaccapital.com" data-av="MT" data-sub="Deal Team · 7 apps">Marc Trias</option><option value="clara.ferran@abaccapital.com" data-av="CF" data-sub="Nest · 7 apps">Clara Ferran</option><option value="oriol.puig@abaccapital.com" data-av="OP" data-sub="Deal Team · 7 apps">Oriol Puig</option><option value="nuria.codina@abaccapital.com" data-av="NC" data-sub="Operations · 7 apps">Núria Codina</option><option value="persona.nueva@abaccapital.com" data-av="PN" data-sub="Sin equipo · sin apps">Persona nueva</option></select><div class="role"><span class="pill navy">Admin</span><button class="btn sm ghost" id="logoutBtn" type="button"><svg class="ti" aria-hidden="true"><use href="#i-logout"/></svg> Salir</button></div><!--/STATIC:userbox--></div>
 </aside>
 <div class="side-backdrop" id="sideBackdrop"></div>
 
@@ -473,7 +510,7 @@ kbd{font-family:inherit;font-size:10.5px;font-weight:600;color:var(--muted);back
     <div class="sp"></div>
     <div id="topact"></div>
   </div>
-  <div class="content" id="content"><!--STATIC:content--><div class="page"><div class="row" style="margin-bottom:22px;gap:14px;align-items:flex-start"><div class="avatar lg">HM</div><div><div class="hd">Hola, Hugo</div><div class="mut">Tienes acceso a 3 aplicaciones. Se abren con tu sesión de Microsoft, sin volver a escribir la contraseña.</div></div></div><div class="res-sub">Aplicaciones de Abac</div><div class="apps stagger"><div class="appcard"><a class="cover" href="https://abac1324.github.io/Dashboard/" target="_blank" rel="noopener" data-open="app:portfolio" aria-label="Abrir Portfolio Hub"></a><button type="button" class="btn icobtn star" data-pin="app:portfolio" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Portfolio Hub"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-chart-histogram"/></svg></div><div><div class="an">Portfolio Hub<span class="st" data-st="https://abac1324.github.io/Dashboard/"></span></div><div class="ad">Dashboard de cartera de los fondos: Fund Overview, Performance, Valuation, Sustainability y Risk.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></div><div class="appcard"><a class="cover" href="https://abac1324.github.io/RRHH/" target="_blank" rel="noopener" data-open="app:rrhh" aria-label="Abrir RRHH · Evaluaciones"></a><button type="button" class="btn icobtn star" data-pin="app:rrhh" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar RRHH · Evaluaciones"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-users"/></svg></div><div><div class="an">RRHH · Evaluaciones<span class="st" data-st="https://abac1324.github.io/RRHH/"></span></div><div class="ad">Evaluaciones de desempeño: cascada de junio y 360 de diciembre.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></div><div class="appcard"><a class="cover" href="https://abac1324.github.io/Staffing/" target="_blank" rel="noopener" data-open="app:staffing" aria-label="Abrir Staffing · Registro de horas"></a><button type="button" class="btn icobtn star" data-pin="app:staffing" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Staffing · Registro de horas"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-clock-hour-4"/></svg></div><div><div class="an">Staffing · Registro de horas<span class="st" data-st="https://abac1324.github.io/Staffing/"></span></div><div class="ad">Previsión y horas reales por semana y proyecto. Capacidad del equipo.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></div><a class="appcard add" href="#" data-go="app-new"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></div><div><b>Añadir al catálogo</b><span>Para el equipo, sin tocar código</span></div></a></div><div class="res-sub">Mis apps <span class="res-note">· solo las ves tú</span></div><div class="apps mine stagger"><button type="button" class="mycard add" data-go="link-new"><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></span><span class="tx"><b>Añadir a mis apps</b><span>Cualquier web externa, con el nombre que quieras</span></span></button></div></div><!--/STATIC:content--></div>
+  <div class="content" id="content"><!--STATIC:content--><div class="page"><div class="row" style="margin-bottom:22px;gap:14px;align-items:flex-start"><div class="avatar lg">HM</div><div><div class="hd">Hola, Hugo</div><div class="mut">Tienes acceso a 3 aplicaciones. Se abren con tu sesión de Microsoft, sin volver a escribir la contraseña.</div></div></div><div class="notices"><div class="notice" role="status"><span class="ni"><svg class="ti" aria-hidden="true"><use href="#i-speakerphone"/></svg></span><div class="nt">Ejemplo de aviso: recordad registrar las horas de la semana antes del viernes.<a class="napp" href="https://abac1324.github.io/Staffing/" target="_blank" rel="noopener" data-open="app:staffing">Abrir Staffing</a></div><button type="button" class="btn icobtn" data-dismiss="n1" title="Cerrar este aviso" aria-label="Cerrar este aviso"><svg class="ti" aria-hidden="true"><use href="#i-x"/></svg></button></div></div><div class="res-sub">Aplicaciones de Abac</div><div class="apps stagger"><div class="appcard"><a class="cover" href="https://abac1324.github.io/Dashboard/" target="_blank" rel="noopener" data-open="app:portfolio" aria-label="Abrir Portfolio Hub"></a><button type="button" class="btn icobtn star" data-pin="app:portfolio" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Portfolio Hub"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-chart-histogram"/></svg></div><div><div class="an">Portfolio Hub<span class="st" data-st="https://abac1324.github.io/Dashboard/"></span></div><div class="ad">Dashboard de cartera de los fondos: Fund Overview, Performance, Valuation, Sustainability y Risk.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></div><div class="appcard"><a class="cover" href="https://abac1324.github.io/RRHH/" target="_blank" rel="noopener" data-open="app:rrhh" aria-label="Abrir RRHH · Evaluaciones"></a><button type="button" class="btn icobtn star" data-pin="app:rrhh" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar RRHH · Evaluaciones"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-users"/></svg></div><div><div class="an">RRHH · Evaluaciones<span class="st" data-st="https://abac1324.github.io/RRHH/"></span></div><div class="ad">Evaluaciones de desempeño: cascada de junio y 360 de diciembre.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></div><div class="appcard"><a class="cover" href="https://abac1324.github.io/Staffing/" target="_blank" rel="noopener" data-open="app:staffing" aria-label="Abrir Staffing · Registro de horas"></a><button type="button" class="btn icobtn star" data-pin="app:staffing" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Staffing · Registro de horas"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-clock-hour-4"/></svg></div><div><div class="an">Staffing · Registro de horas<span class="st" data-st="https://abac1324.github.io/Staffing/"></span></div><div class="ad">Previsión y horas reales por semana y proyecto. Capacidad del equipo.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></div><a class="appcard add" href="#" data-go="app-new"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></div><div><b>Añadir al catálogo</b><span>Para el equipo, sin tocar código</span></div></a></div><div class="res-sub">Herramientas de Abac <span class="res-note">· enlaces externos; entras con tu acceso de cada una</span></div><div class="apps mine stagger"><div class="mycard"><a class="cover" href="https://app.factorialhr.com/" target="_blank" rel="noopener" data-open="app:factorial" aria-label="Abrir Factorial"></a><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-users"/></svg></span><span class="tx"><b>Factorial</b><span>app.factorialhr.com</span></span><span class="acts"><button type="button" class="btn icobtn star" data-pin="app:factorial" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Factorial"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button></span></div><div class="mycard"><a class="cover" href="https://abac.ecapital.es/" target="_blank" rel="noopener" data-open="app:ecapital" aria-label="Abrir eCapital"></a><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-building"/></svg></span><span class="tx"><b>eCapital</b><span>abac.ecapital.es</span></span><span class="acts"><button type="button" class="btn icobtn star" data-pin="app:ecapital" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar eCapital"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button></span></div><div class="mycard"><a class="cover" href="https://podio.com/" target="_blank" rel="noopener" data-open="app:podio" aria-label="Abrir Podio"></a><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-clipboard-list"/></svg></span><span class="tx"><b>Podio</b><span>podio.com</span></span><span class="acts"><button type="button" class="btn icobtn star" data-pin="app:podio" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Podio"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button></span></div><div class="mycard"><a class="cover" href="https://dynamo.dynamosoftware.com/" target="_blank" rel="noopener" data-open="app:dynamo" aria-label="Abrir Dynamo"></a><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-briefcase"/></svg></span><span class="tx"><b>Dynamo</b><span>dynamo.dynamosoftware.com</span></span><span class="acts"><button type="button" class="btn icobtn star" data-pin="app:dynamo" title="Fijar en la barra lateral" aria-pressed="false" aria-label="Fijar Dynamo"><svg class="ti" aria-hidden="true"><use href="#i-star"/></svg></button></span></div></div><div class="res-sub">Mis apps <span class="res-note">· solo las ves tú</span></div><div class="apps mine stagger"><button type="button" class="mycard add" data-go="link-new"><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></span><span class="tx"><b>Añadir a mis apps</b><span>Cualquier web externa, con el nombre que quieras</span></span></button></div></div><!--/STATIC:content--></div>
   <div class="footer">
     <div class="fl">Abac · Portal de aplicaciones<span class="svi">SUSTAINABLE VALUE INVESTING</span></div>
     <div class="fr">© 2026 Abac Capital · Confidential · Internal use only</div>
@@ -502,24 +539,46 @@ kbd{font-family:inherit;font-size:10.5px;font-weight:600;color:var(--muted);back
 var APPS = [
   { id:'portfolio', name:'Portfolio Hub', desc:'Dashboard de cartera de los fondos: Fund Overview, Performance, Valuation, Sustainability y Risk.', url:'https://abac1324.github.io/Dashboard/', kind:'propia', icon:'chart-histogram', active:true },
   { id:'rrhh', name:'RRHH · Evaluaciones', desc:'Evaluaciones de desempeño: cascada de junio y 360 de diciembre.', url:'https://abac1324.github.io/RRHH/', kind:'propia', icon:'users', active:true },
-  { id:'staffing', name:'Staffing · Registro de horas', desc:'Previsión y horas reales por semana y proyecto. Capacidad del equipo.', url:'https://abac1324.github.io/Staffing/', kind:'propia', icon:'clock-hour-4', active:true }
+  { id:'staffing', name:'Staffing · Registro de horas', desc:'Previsión y horas reales por semana y proyecto. Capacidad del equipo.', url:'https://abac1324.github.io/Staffing/', kind:'propia', icon:'clock-hour-4', active:true },
+  /* Herramientas externas para todo el equipo (Hugo, 23-nov-2026: «ok» a ponerlas; salen de su barra de favoritos).
+     eCapital y Dynamo: direcciones que Hugo usó en Mis apps. Factorial y Podio: ESTOY SUPONIENDO la dirección de entrada; confirmar. */
+  { id:'factorial', name:'Factorial', desc:'', url:'https://app.factorialhr.com/', kind:'externa', icon:'users', active:true },
+  { id:'ecapital', name:'eCapital', desc:'', url:'https://abac.ecapital.es/', kind:'externa', icon:'building', active:true },
+  { id:'podio', name:'Podio', desc:'', url:'https://podio.com/', kind:'externa', icon:'clipboard-list', active:true },
+  { id:'dynamo', name:'Dynamo', desc:'', url:'https://dynamo.dynamosoftware.com/', kind:'externa', icon:'briefcase', active:true }
 ];
+/* Equipos (Hugo, 23-nov-2026): cada persona está en uno y ve las apps de su equipo, más las que se le den a ella sola («extra»).
+   Los tres de RRHH. Qué apps lleva cada equipo: ESTOY SUPONIENDO (Portfolio Hub para Deal Team y Operations; el resto, todos). */
+var TEAMS = [
+  { id:'deal', name:'Deal Team', apps:['portfolio','rrhh','staffing','factorial','ecapital','podio','dynamo'] },
+  { id:'operations', name:'Operations', apps:['portfolio','rrhh','staffing','factorial','ecapital','podio','dynamo'] },
+  { id:'nest', name:'Nest', apps:['rrhh','staffing','factorial','ecapital','podio','dynamo'] }
+];
+/* Avisos que escribe un administrador; salen arriba en el inicio hasta su fecha y cada persona puede cerrarlos. El de abajo es un ejemplo. */
+var NOTICES = [
+  { id:'n1', text:'Ejemplo de aviso: recordad registrar las horas de la semana antes del viernes.', app:'staffing', team:'', until:'2026-12-31' }
+];
+/* Personas FICTICIAS (salvo Hugo). La versión _LOCAL que escribe generar_versiones.js cambia este bloque por las personas reales
+   de 2 - Base de datos/personas_abac_LOCAL.json; esa versión nunca se publica. */
+/*USERS:start*/
 var USERS = [
-  { email:'hugo.mengual@abaccapital.com', name:'Hugo Mengual', admin:true, apps:'*', last:'hace 5 min' },
-  { email:'laia.bosch@abaccapital.com', name:'Laia Bosch', admin:false, apps:['rrhh','staffing'], last:'ayer' },
-  { email:'marc.trias@abaccapital.com', name:'Marc Trias', admin:false, apps:['portfolio','rrhh','staffing'], last:'hace 2 h' },
-  { email:'clara.ferran@abaccapital.com', name:'Clara Ferran', admin:false, apps:['rrhh','staffing'], last:'hace 3 días' },
-  { email:'oriol.puig@abaccapital.com', name:'Oriol Puig', admin:false, apps:['portfolio'], expires:'31/12/2026', last:'hace 1 semana' },
-  { email:'nuria.codina@abaccapital.com', name:'Núria Codina', admin:false, apps:['rrhh','staffing'], last:'hoy' },
-  { email:'persona.nueva@abaccapital.com', name:'Persona nueva', admin:false, apps:[], last:'—' }
+  { email:'hugo.mengual@abaccapital.com', name:'Hugo Mengual', admin:true, team:'operations', extra:[], last:'hace 5 min' },
+  { email:'laia.bosch@abaccapital.com', name:'Laia Bosch', admin:false, team:'nest', extra:[], last:'ayer' },
+  { email:'marc.trias@abaccapital.com', name:'Marc Trias', admin:false, team:'deal', extra:[], last:'hace 2 h' },
+  { email:'clara.ferran@abaccapital.com', name:'Clara Ferran', admin:false, team:'nest', extra:['portfolio'], last:'hace 3 días' },
+  { email:'oriol.puig@abaccapital.com', name:'Oriol Puig', admin:false, team:'deal', extra:[], expires:'31/12/2026', last:'hace 1 semana' },
+  { email:'nuria.codina@abaccapital.com', name:'Núria Codina', admin:false, team:'operations', extra:[], last:'hoy' },
+  { email:'persona.nueva@abaccapital.com', name:'Persona nueva', admin:false, team:'', extra:[], last:'—' }
 ];
+/*USERS:end*/
 var ICONS = ['chart-histogram','users','clock-hour-4','briefcase','file-description','clipboard-list','building','world','mail'];
 var TABS = [
   { id:'home', label:'Inicio', icon:'layout-grid', title:'Abac — Aplicaciones' },
   { id:'access', label:'Accesos', icon:'shield-lock', title:'Abac — Accesos', admin:true, grp:'Administración' },
-  { id:'apps', label:'Catálogo de apps', icon:'apps', title:'Abac — Catálogo de aplicaciones', admin:true }
+  { id:'apps', label:'Catálogo de apps', icon:'apps', title:'Abac — Catálogo de aplicaciones', admin:true },
+  { id:'notices', label:'Avisos', icon:'speakerphone', title:'Abac — Avisos', admin:true }
 ];
-var STATE = { viewer: USERS[0].email, tab:'home', q:'' };
+var STATE = { viewer: USERS[0].email, tab:'home', q:'', accView:'people' };
 /* «Mis apps»: enlaces externos que cada persona añade para sí misma (nombre + dirección); solo los ve ella.
    En la maqueta se guardan en este navegador, por persona (localStorage). En la app real irán a la tabla user_links con RLS
    (cada uno lee y escribe solo sus filas; ver COMO_FUNCIONARIA.md §5). */
@@ -534,7 +593,7 @@ var PREFS_KEY = 'abac_portal_preferencias';
 var PREFS = {};
 function loadPrefs(){ try { PREFS = JSON.parse(root.localStorage.getItem(PREFS_KEY) || '{}') || {}; } catch (e) { PREFS = {}; } }
 function savePrefs(){ try { root.localStorage.setItem(PREFS_KEY, JSON.stringify(PREFS)); return true; } catch (e) { return false; } }
-function prefsOf(u){ var p = PREFS[u.email]; if (!p) p = PREFS[u.email] = { pins:[], recent:[] }; p.pins = p.pins || []; p.recent = p.recent || []; return p; }
+function prefsOf(u){ var p = PREFS[u.email]; if (!p) p = PREFS[u.email] = { pins:[], recent:[] }; p.pins = p.pins || []; p.recent = p.recent || []; p.dismissed = p.dismissed || []; return p; }
 function hostOf(url){ var m = String(url).match(/^https?:\/\/([^\/?#]+)/i); return m ? m[1].replace(/^www\./, '') : url; }
 /* Solo direcciones web: si falta, se pone https://; se rechaza cualquier otra cosa (javascript:, mailto:…) */
 function normUrl(v){ v = String(v || '').trim(); if (!v) return ''; if (!/^[a-z][a-z0-9+.-]*:/i.test(v)) v = 'https://' + v;
@@ -546,13 +605,19 @@ function ic(n){ return '<svg class="ti" aria-hidden="true"><use href="#i-' + n +
 function ini(name){ return name.split(/\s+/).slice(0,2).map(function(p){ return p.charAt(0); }).join('').toUpperCase(); }
 function viewer(){ return USERS.filter(function(u){ return u.email === STATE.viewer; })[0] || USERS[0]; }
 function appById(id){ return APPS.filter(function(a){ return a.id === id; })[0]; }
-function canSee(u, a){ return u.admin || u.apps === '*' || (Array.isArray(u.apps) && u.apps.indexOf(a.id) >= 0); }
+function teamById(id){ return TEAMS.filter(function(t){ return t.id === id; })[0]; }
+function viaTeam(u, a){ var t = teamById(u.team); return !!t && t.apps.indexOf(a.id) >= 0; }
+function canSee(u, a){ return u.admin || viaTeam(u, a) || (u.extra || []).indexOf(a.id) >= 0; }
+function todayISO(){ var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+function fmtDate(iso){ var m = String(iso || '').match(/^(\d{4})-(\d{2})-(\d{2})$/); return m ? m[3] + '/' + m[2] + '/' + m[1] : '—'; }
+function noticeActive(n){ return !n.until || n.until >= todayISO(); }
+function noticesFor(u){ var dis = prefsOf(u).dismissed || []; return NOTICES.filter(function(n){ return noticeActive(n) && (!n.team || n.team === u.team) && dis.indexOf(n.id) < 0; }); }
 function visibleApps(u){ return APPS.filter(function(a){ return a.active && canSee(u, a); }); }
 function currentTab(){ var u = viewer(); if (!TABS.some(function(t){ return t.id === STATE.tab && (!t.admin || u.admin); })) STATE.tab = 'home'; return TABS.filter(function(t){ return t.id === STATE.tab; })[0]; }
 
 /* Todo lo que una persona puede abrir: las apps de Abac que tiene asignadas y sus enlaces de «Mis apps» */
 function itemsOf(u){
-  return visibleApps(u).map(function(a){ return { id:'app:' + a.id, kind:'app', name:a.name, url:a.url, icon:a.icon, sub:a.desc || '' }; })
+  return visibleApps(u).map(function(a){ return { id:'app:' + a.id, kind:'app', name:a.name, url:a.url, icon:a.icon, sub:a.desc || hostOf(a.url) }; })
     .concat(myLinks(u).map(function(l){ return { id:'link:' + l.id, kind:'link', name:l.name, url:l.url, sub:hostOf(l.url) }; }));
 }
 function itemById(u, id){ return itemsOf(u).filter(function(i){ return i.id === id; })[0]; }
@@ -584,22 +649,29 @@ function navHTML(){
 function userboxHTML(){
   var u = viewer();
   return '<label for="viewer">Usuario · ver como</label>' +
-    '<div class="uc"><div class="uc-av" data-tip="' + esc(u.name) + '">' + esc(ini(u.name)) + '</div><div><div class="uc-name">' + esc(u.name) + '</div><div class="uc-role">' + (u.admin ? 'Administrador' : 'Acceso asignado') + '</div></div></div>' +
-    '<select id="viewer">' + USERS.map(function(x){ var sub = x.admin ? 'Administrador' : (x.apps.length ? x.apps.length + (x.apps.length === 1 ? ' aplicación' : ' aplicaciones') : 'Sin aplicaciones'); return '<option value="' + esc(x.email) + '" data-av="' + esc(ini(x.name)) + '" data-sub="' + esc(sub) + '"' + (x.email === STATE.viewer ? ' selected' : '') + '>' + esc(x.name) + '</option>'; }).join('') + '</select>' +
+    '<div class="uc"><div class="uc-av" data-tip="' + esc(u.name) + '">' + esc(ini(u.name)) + '</div><div><div class="uc-name">' + esc(u.name) + '</div><div class="uc-role">' + (u.admin ? 'Administrador' : (teamById(u.team) ? teamById(u.team).name : 'Sin equipo')) + '</div></div></div>' +
+    '<select id="viewer">' + USERS.map(function(x){ var nv = visibleApps(x).length, tm = teamById(x.team); var sub = x.admin ? 'Administrador' : (tm ? tm.name + ' · ' : 'Sin equipo · ') + (nv ? nv + (nv === 1 ? ' app' : ' apps') : 'sin apps'); return '<option value="' + esc(x.email) + '" data-av="' + esc(ini(x.name)) + '" data-sub="' + esc(sub) + '"' + (x.email === STATE.viewer ? ' selected' : '') + '>' + esc(x.name) + '</option>'; }).join('') + '</select>' +
     '<div class="role">' + (u.admin ? '<span class="pill navy">Admin</span>' : '<span class="pill gray">Usuario</span>') + '<button class="btn sm ghost" id="logoutBtn" type="button">' + ic('logout') + ' Salir</button></div>';
 }
 function topactHTML(){
+  if (STATE.tab === 'access' && STATE.accView === 'teams') return '<button class="btn pri" type="button" data-go="team-new" title="Nuevo equipo">' + ic('plus') + '<span class="lbl">Nuevo equipo</span></button>';
+  if (STATE.tab === 'notices') return '<button class="btn pri" type="button" data-go="notice-new" title="Nuevo aviso">' + ic('plus') + '<span class="lbl">Nuevo aviso</span></button>';
   return STATE.tab === 'access' ? '<button class="btn pri" type="button" data-go="user-new" title="Añadir persona">' + ic('user-plus') + '<span class="lbl">Añadir persona</span></button>'
        : STATE.tab === 'apps' ? '<button class="btn pri" type="button" data-go="app-new" title="Nueva aplicación">' + ic('plus') + '<span class="lbl">Nueva aplicación</span></button>'
        : '<button class="btn" type="button" data-go="link-new" title="Añadir a mis apps">' + ic('plus') + '<span class="lbl">Añadir a mis apps</span></button>';
 }
 function homeHTML(){
-  var u = viewer(); var apps = visibleApps(u); var first = u.name.split(' ')[0];
+  var u = viewer(); var all = visibleApps(u); var apps = all.filter(function(a){ return a.kind !== 'externa'; }); var tools = all.filter(function(a){ return a.kind === 'externa'; }); var first = u.name.split(' ')[0];
   var html = '<div class="row" style="margin-bottom:22px;gap:14px;align-items:flex-start"><div class="avatar lg">' + esc(ini(u.name)) + '</div><div><div class="hd">Hola, ' + esc(first) + '</div><div class="mut">' +
     (apps.length ? 'Tienes acceso a ' + apps.length + (apps.length === 1 ? ' aplicación' : ' aplicaciones') + '. Se abren con tu sesión de Microsoft, sin volver a escribir la contraseña.' : 'Todavía no tienes aplicaciones asignadas.') + '</div></div></div>';
+  var nts = noticesFor(u);
+  if (nts.length) html += '<div class="notices">' + nts.map(function(n){ var a = n.app ? appById(n.app) : null; var see = a && canSee(u, a);
+    return '<div class="notice" role="status"><span class="ni">' + ic('speakerphone') + '</span><div class="nt">' + esc(n.text) +
+      (see ? '<a class="napp" href="' + esc(a.url) + '" target="_blank" rel="noopener" data-open="app:' + esc(a.id) + '">Abrir ' + esc(a.name.split(' · ')[0]) + '</a>' : '') + '</div>' +
+      '<button type="button" class="btn icobtn" data-dismiss="' + esc(n.id) + '" title="Cerrar este aviso" aria-label="Cerrar este aviso">' + ic('x') + '</button></div>'; }).join('') + '</div>';
   html += '<div class="res-sub">Aplicaciones de Abac</div>';
   if (!apps.length && !u.admin) {
-    return html + '<div class="card"><div class="empty"><div class="ic">' + ic('lock') + '</div><div class="t">Sin aplicaciones asignadas</div><div class="d">Un administrador tiene que darte acceso. Escribe a hugo.mengual@abaccapital.com.</div></div></div>' + myLinksHTML(u);
+    return html + '<div class="card"><div class="empty"><div class="ic">' + ic('lock') + '</div><div class="t">Sin aplicaciones asignadas</div><div class="d">Un administrador tiene que darte acceso. Escribe a hugo.mengual@abaccapital.com.</div></div></div>' + toolsHTML(u, tools) + myLinksHTML(u);
   }
   html += '<div class="apps stagger">' + apps.map(function(a){
     return '<div class="appcard"><a class="cover" href="' + esc(a.url) + '" target="_blank" rel="noopener" data-open="app:' + esc(a.id) + '" aria-label="Abrir ' + esc(a.name) + '"></a>' +
@@ -610,7 +682,16 @@ function homeHTML(){
   }).join('') +
   (u.admin ? '<a class="appcard add" href="#" data-go="app-new"><div class="appicon">' + ic('plus') + '</div><div><b>Añadir al catálogo</b><span>Para el equipo, sin tocar código</span></div></a>' : '') +
   '</div>';
-  return html + myLinksHTML(u);
+  return html + toolsHTML(u, tools) + myLinksHTML(u);
+}
+/* Herramientas externas que el administrador pone para el equipo: tarjetas compactas, como Mis apps */
+function toolsHTML(u, tools){
+  if (!tools.length) return '';
+  return '<div class="res-sub">Herramientas de Abac <span class="res-note">· enlaces externos; entras con tu acceso de cada una</span></div><div class="apps mine stagger">' + tools.map(function(a){
+    return '<div class="mycard"><a class="cover" href="' + esc(a.url) + '" target="_blank" rel="noopener" data-open="app:' + esc(a.id) + '" aria-label="Abrir ' + esc(a.name) + '"></a>' +
+      '<span class="lt">' + ic(a.icon) + '</span><span class="tx"><b>' + esc(a.name) + (isPinned(u, 'app:' + a.id) ? '<span class="pinmark" title="Fijada">' + ic('star') + '</span>' : '') + '</b><span>' + esc(hostOf(a.url)) + '</span></span>' +
+      '<span class="acts">' + starBtn(u, 'app:' + a.id, a.name) + '</span></div>';
+  }).join('') + '</div>';
 }
 function myLinksHTML(u){
   var ml = myLinks(u);
@@ -622,30 +703,69 @@ function myLinksHTML(u){
   }).join('') +
   '<button type="button" class="mycard add" data-go="link-new"><span class="lt">' + ic('plus') + '</span><span class="tx"><b>Añadir a mis apps</b><span>' + (ml.length ? 'Otro enlace con el nombre que quieras' : 'Cualquier web externa, con el nombre que quieras') + '</span></span></button></div>';
 }
-function accessHTML(){
+function accHeadHTML(){
+  return '<div class="acc-head"><div class="rb" role="tablist" aria-label="Ver accesos por"><button type="button" role="tab" data-accview="people" class="' + (STATE.accView === 'people' ? 'on' : '') + '" aria-selected="' + (STATE.accView === 'people') + '">Personas</button>' +
+    '<button type="button" role="tab" data-accview="teams" class="' + (STATE.accView === 'teams' ? 'on' : '') + '" aria-selected="' + (STATE.accView === 'teams') + '">Equipos</button></div>' +
+    '<span class="mut sm">' + USERS.length + ' personas · ' + TEAMS.length + ' equipos</span></div>';
+}
+function teamOptions(sel){ return '<option value=""' + (!sel ? ' selected' : '') + '>Sin equipo</option>' + TEAMS.map(function(t){ return '<option value="' + t.id + '"' + (t.id === sel ? ' selected' : '') + '>' + esc(t.name) + '</option>'; }).join(''); }
+function accessHTML(){ return accHeadHTML() + (STATE.accView === 'teams' ? teamsHTML() : peopleHTML()); }
+function peopleHTML(){
   var q = STATE.q.toLowerCase(); var apps = APPS.filter(function(a){ return a.active; });
-  var users = USERS.filter(function(u){ return !q || (u.name + ' ' + u.email).toLowerCase().indexOf(q) >= 0; });
-  var html = '<div class="card"><h3>Personas y aplicaciones<span class="r"><input id="q" class="search" type="text" autocomplete="off" placeholder="Buscar persona o correo" value="' + esc(STATE.q) + '" aria-label="Buscar persona o correo"></span></h3>';
-  html += '<div class="tablewrap"><table><thead><tr><th>Persona</th><th>Rol</th>' + apps.map(function(a){ return '<th class="c" title="' + esc(a.name) + '">' + esc(a.name.split(' · ')[0]) + '</th>'; }).join('') + '<th>Caduca</th><th>Último acceso</th></tr></thead><tbody>';
-  users.forEach(function(u){
-    html += '<tr><td><div class="person"><div class="avatar">' + esc(ini(u.name)) + '</div><div><b>' + esc(u.name) + '</b><span>' + esc(u.email) + '</span></div></div></td>';
-    html += '<td><button type="button" class="pill clickable ' + (u.admin ? 'navy' : 'gray') + '" data-admin="' + esc(u.email) + '" title="Cambiar rol">' + (u.admin ? 'Admin' : 'Usuario') + '</button></td>';
-    apps.forEach(function(a){
-      html += u.admin
-        ? '<td class="c"><button type="button" class="sw on lock" disabled title="Los administradores ven todas las aplicaciones" aria-label="Siempre visible para administradores"></button></td>'
-        : '<td class="c"><button type="button" class="sw' + (canSee(u, a) ? ' on' : '') + '" data-toggle="' + esc(u.email) + '|' + a.id + '" title="' + (canSee(u, a) ? 'Quitar' : 'Dar') + ' acceso a ' + esc(a.name) + '" aria-pressed="' + (canSee(u, a) ? 'true' : 'false') + '"></button></td>';
+  var users = USERS.filter(function(u){ return !q || (u.name + ' ' + u.email + ' ' + (u.position || '')).toLowerCase().indexOf(q) >= 0; });
+  var html = '<div class="card"><h3>Personas y aplicaciones<span class="r"><input id="q" class="search" type="text" autocomplete="off" placeholder="Buscar persona, correo o puesto" value="' + esc(STATE.q) + '" aria-label="Buscar persona, correo o puesto"></span></h3>';
+  html += '<div class="tablewrap"><table><thead><tr><th>Persona</th><th>Equipo</th><th>Rol</th>' + apps.map(function(a){ return '<th class="c" title="' + esc(a.name) + '">' + esc(a.name.split(' · ')[0]) + '</th>'; }).join('') + '<th>Caduca</th><th>Último acceso</th></tr></thead><tbody>';
+  var groups = TEAMS.map(function(t){ return { id:t.id, name:t.name }; }).concat([{ id:'', name:'Sin equipo' }]);
+  groups.forEach(function(g){
+    var us = users.filter(function(u){ return (u.team || '') === g.id; }); if (!us.length) return;
+    html += '<tr class="teamhead"><td colspan="' + (apps.length + 5) + '"><div class="th">' + ic('users-group') + esc(g.name) + ' <span class="n">· ' + us.length + '</span></div></td></tr>';
+    us.forEach(function(u){
+      html += '<tr><td><div class="person"><div class="avatar">' + esc(ini(u.name)) + '</div><div><b>' + esc(u.name) + '</b><span>' + esc(u.position ? u.position + ' · ' + u.email : u.email) + '</span></div></div></td>';
+      html += '<td><select data-team-of="' + esc(u.email) + '" aria-label="Equipo de ' + esc(u.name) + '">' + teamOptions(u.team) + '</select></td>';
+      html += '<td><button type="button" class="pill clickable ' + (u.admin ? 'navy' : 'gray') + '" data-admin="' + esc(u.email) + '" title="Cambiar rol">' + (u.admin ? 'Admin' : 'Usuario') + '</button></td>';
+      apps.forEach(function(a){
+        if (u.admin) { html += '<td class="c"><span class="allok" title="Los administradores ven todas las aplicaciones" aria-label="Administrador: la ve">' + ic('check') + '</span></td>'; return; }
+        if (viaTeam(u, a)) { html += '<td class="c"><button type="button" class="sw on team" data-viateam="' + esc(teamById(u.team).name) + '" title="La tiene por su equipo (' + esc(teamById(u.team).name) + '). Se cambia en Equipos." aria-label="' + esc(a.name) + ' por su equipo"></button></td>'; return; }
+        var on = (u.extra || []).indexOf(a.id) >= 0;
+        html += '<td class="c"><button type="button" class="sw' + (on ? ' on' : '') + '" data-toggle="' + esc(u.email) + '|' + a.id + '" title="' + (on ? 'Quitar' : 'Dar') + ' ' + esc(a.name) + ' solo a esta persona" aria-pressed="' + on + '"></button></td>';
+      });
+      html += '<td class="mut">' + (u.expires ? esc(u.expires) : '—') + '</td><td class="mut">' + esc(u.last) + '</td></tr>';
     });
-    html += '<td class="mut">' + (u.expires ? esc(u.expires) : '—') + '</td><td class="mut">' + esc(u.last) + '</td></tr>';
   });
-  if (!users.length) html += '<tr><td colspan="' + (apps.length + 4) + '" class="mut" style="text-align:center;padding:22px">Nadie coincide con la búsqueda</td></tr>';
-  html += '</tbody></table></div></div>';
-  html += '<div class="alert info" style="margin-top:16px">' + ic('info-circle') + '<div>Aquí se decide qué aparece en el inicio de cada persona. Los permisos <b>dentro</b> de cada aplicación (empresas, pestañas, roles) se siguen gestionando en la propia aplicación mientras cada una tenga su base de datos.</div></div>';
+  if (!users.length) html += '<tr><td colspan="' + (apps.length + 5) + '" class="mut" style="text-align:center;padding:22px">Nadie coincide con la búsqueda</td></tr>';
+  html += '</tbody></table></div><div class="legend"><span><i style="background:#6c77a3"></i>Por su equipo</span><span><i style="background:var(--navy)"></i>Dada solo a esa persona</span><span><i style="background:#d5dae3"></i>No la ve</span><span><span class="allok" style="width:16px;height:16px;font-size:10px;margin-right:6px;vertical-align:-3px">' + ic('check') + '</span>Administrador: lo ve todo</span></div></div>';
+  html += '<div class="alert info" style="margin-top:16px">' + ic('info-circle') + '<div>Cada persona ve las apps de <b>su equipo</b> y, además, las que se le den a ella sola. Para cambiar las de todo un equipo, ve a <b>Equipos</b>. Los permisos <b>dentro</b> de cada aplicación se siguen gestionando en la propia aplicación mientras cada una tenga su base de datos.</div></div>';
+  return html;
+}
+function teamsHTML(){
+  var apps = APPS.filter(function(a){ return a.active; });
+  var html = '<div class="teams stagger">' + TEAMS.map(function(t){
+    var mem = USERS.filter(function(u){ return u.team === t.id; });
+    return '<div class="card"><h3>' + ic('users-group') + esc(t.name) + '<span class="r">' + mem.length + ' persona' + (mem.length === 1 ? '' : 's') +
+      '<button type="button" class="btn icobtn" data-team-remove="' + t.id + '" title="Quitar el equipo" aria-label="Quitar el equipo ' + esc(t.name) + '">' + ic('x') + '</button></span></h3>' +
+      apps.map(function(a){ var on = t.apps.indexOf(a.id) >= 0;
+        return '<div class="trow"><span class="appicon' + (a.kind === 'externa' ? ' ext' : '') + '">' + ic(a.icon) + '</span><span class="tn">' + esc(a.name) + '</span>' + (a.kind === 'externa' ? '<span class="pill gray">Externa</span>' : '') +
+          '<button type="button" class="sw' + (on ? ' on' : '') + '" data-team-toggle="' + t.id + '|' + a.id + '" title="' + (on ? 'Quitar' : 'Dar') + ' ' + esc(a.name) + ' a todo el equipo" aria-pressed="' + on + '"></button></div>'; }).join('') +
+      '<div class="members">' + (mem.length ? mem.map(function(u){ return '<span class="chip"><span class="avatar">' + esc(ini(u.name)) + '</span>' + esc(u.name.split(' ').slice(0, 2).join(' ')) + '</span>'; }).join('') : '<span class="mut sm">Nadie todavía. Se asigna en Personas.</span>') + '</div></div>';
+  }).join('') + '</div>';
+  var none = USERS.filter(function(u){ return !teamById(u.team); }).length;
+  html += '<div class="alert info" style="margin-top:16px">' + ic('info-circle') + '<div>Al cambiar las apps de un equipo, cambian para todas sus personas a la vez. ' + (none ? '<b>' + none + (none === 1 ? ' persona no tiene' : ' personas no tienen') + ' equipo</b>: solo ven lo que se les dé una a una.' : 'Todo el mundo tiene equipo.') + '</div></div>';
+  return html;
+}
+function noticesHTML(){
+  var html = '<div class="card"><h3>Avisos en el inicio<span class="r">' + NOTICES.filter(noticeActive).length + ' activos</span></h3>';
+  html += NOTICES.map(function(n){ var a = n.app ? appById(n.app) : null, t = n.team ? teamById(n.team) : null, act = noticeActive(n);
+    return '<div class="approw' + (act ? '' : ' off') + '"><div class="appicon">' + ic('speakerphone') + '</div><div class="info"><b style="font-weight:600">' + esc(n.text) + '</b>' +
+      '<div class="nmeta"><span class="pill ' + (act ? 'ok' : 'bad') + '">' + (act ? 'Visible hasta ' + fmtDate(n.until) : 'Caducado el ' + fmtDate(n.until)) + '</span><span class="pill gray">' + (t ? esc(t.name) : 'Todos') + '</span>' + (a ? '<span class="pill">' + esc(a.name.split(' · ')[0]) + '</span>' : '') + '</div></div>' +
+      '<button type="button" class="btn sm" data-notice-edit="' + n.id + '">' + ic('pencil') + ' Editar</button><button type="button" class="btn sm ghost" data-notice-remove="' + n.id + '" title="Quitar el aviso">' + ic('x') + '</button></div>'; }).join('');
+  if (!NOTICES.length) html += '<div class="empty"><div class="ic">' + ic('speakerphone') + '</div><div class="t">No hay avisos</div><div class="d">Escribe uno con el botón de arriba: sale en el inicio de quien elijas hasta la fecha que pongas.</div></div>';
+  html += '</div><div class="alert info" style="margin-top:16px">' + ic('info-circle') + '<div>Cada persona puede cerrar un aviso en su inicio; deja de verlo ella sola. Al pasar la fecha, desaparece para todos.</div></div>';
   return html;
 }
 function appsHTML(){
   var html = '<div class="card"><h3>Catálogo<span class="r">' + APPS.length + ' aplicaciones</span></h3>';
   APPS.forEach(function(a){
-    var n = USERS.filter(function(u){ return !u.admin && canSee(u, a); }).length;
+    var n = USERS.filter(function(u){ return !u.admin && canSee(u, a); }).length;  /* por equipo o una a una */
     html += '<div class="approw' + (a.active ? '' : ' off') + '"><div class="appicon">' + ic(a.icon) + '</div>' +
       '<div class="info"><b>' + esc(a.name) + (a.kind === 'externa' ? '<span class="pill gray">Externa</span>' : '<span class="pill teal">Microsoft</span>') + (a.active ? '' : '<span class="pill gray">Oculta</span>') + '</b><span>' + esc(a.url) + '</span></div>' +
       '<div class="who">' + n + ' persona' + (n === 1 ? '' : 's') + ' + admins</div>' +
@@ -657,10 +777,10 @@ function appsHTML(){
   html += '</div><div class="alert info" style="margin-top:16px">' + ic('info-circle') + '<div><b>Microsoft</b>: aplicación de Abac con el mismo inicio de sesión; se entra sin volver a escribir la contraseña. <b>Externa</b>: enlace a una herramienta ajena; cada persona entra con el acceso que ya tenga allí. Añadir una aplicación es rellenar el formulario: el código del portal no se toca.</div></div>';
   return html;
 }
-function contentHTML(){ var t = currentTab(); return '<div class="page">' + (t.id === 'access' ? accessHTML() : t.id === 'apps' ? appsHTML() : homeHTML()) + '</div>'; }
+function contentHTML(){ var t = currentTab(); return '<div class="page">' + (t.id === 'access' ? accessHTML() : t.id === 'apps' ? appsHTML() : t.id === 'notices' ? noticesHTML() : homeHTML()) + '</div>'; }
 
 /* Lo que usa el generador de versiones (Node) para dejar el inicio ya pintado en el HTML */
-root.PORTAL = { staticHTML: function(){ STATE = { viewer: USERS[0].email, tab:'home', q:'' }; return { nav: navHTML(), userbox: userboxHTML(), content: contentHTML(), title: currentTab().title, topact: topactHTML() }; } };
+root.PORTAL = { staticHTML: function(){ STATE = { viewer: USERS[0].email, tab:'home', q:'', accView:'people' }; return { nav: navHTML(), userbox: userboxHTML(), content: contentHTML(), title: currentTab().title, topact: topactHTML() }; } };
 
 if (typeof document === 'undefined') return;
 
@@ -700,7 +820,7 @@ function optBody(o){ return o.getAttribute('data-av') ? '<span class="avatar sm"
 function enhanceSelects(rootEl){
   (rootEl || document).querySelectorAll('select:not([data-enh])').forEach(function(sel){
     sel.setAttribute('data-enh', '1');
-    var wrap = document.createElement('div'); wrap.className = 'sel';
+    var wrap = document.createElement('div'); wrap.className = 'sel' + (sel.closest('td') ? ' auto' : '');
     sel.parentNode.insertBefore(wrap, sel); wrap.appendChild(sel);
     var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'sel-btn';
     var lab = sel.id ? document.querySelector('label[for="' + sel.id + '"]') : null; if (lab) btn.setAttribute('aria-label', lab.textContent);
@@ -757,7 +877,7 @@ function render(){
   renderNav(); $('#userbox').innerHTML = userboxHTML();
   $('#title').textContent = t.title; $('#topact').innerHTML = topactHTML();
   $('#content').innerHTML = contentHTML();
-  enhanceSelects($('#userbox')); paintStatus();
+  enhanceSelects($('#userbox')); enhanceSelects($('#content')); paintStatus();
   var q = $('#q'); if (q && STATE.q) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
 }
 
@@ -918,7 +1038,7 @@ function editApp(id){
 function removeApp(id){
   var a = appById(id); if (!a) return;
   openModal('<h2>Quitar «' + esc(a.name) + '»</h2><div class="mut sm">Desaparece del catálogo y del inicio de todo el mundo. Si solo quieres esconderla un tiempo, usa el interruptor de visible.</div><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Quitar</button></div>');
-  $('#msave').onclick = function(){ APPS.splice(APPS.indexOf(a), 1); USERS.forEach(function(u){ if (Array.isArray(u.apps)) { var i = u.apps.indexOf(a.id); if (i >= 0) u.apps.splice(i, 1); } }); closeModal(); toast('Aplicación quitada'); render(); };
+  $('#msave').onclick = function(){ APPS.splice(APPS.indexOf(a), 1); var drop = function(arr){ var i = arr.indexOf(a.id); if (i >= 0) arr.splice(i, 1); }; USERS.forEach(function(u){ drop(u.extra || []); }); TEAMS.forEach(function(t){ drop(t.apps); }); closeModal(); toast('Aplicación quitada'); render(); };
 }
 function linkForm(l){
   l = l || { name:'', url:'' };
@@ -952,7 +1072,8 @@ function removeLink(id){
 function newUser(){
   openModal('<h2>Añadir persona</h2><div class="mut sm">Entra con su cuenta de Microsoft; no hay contraseñas que crear ni enviar.</div><form id="mform"><div class="fields">' +
     '<div class="two"><div class="field"><label for="u-name">Nombre</label><input type="text" id="u-name" name="name" placeholder="Nombre y apellido"></div><div class="field"><label for="u-email">Correo de Abac</label><input type="email" id="u-email" name="email" placeholder="nombre.apellido@abaccapital.com"></div></div>' +
-    '<div class="field"><span class="fl-label">Aplicaciones que verá</span><div>' + APPS.filter(function(a){ return a.active; }).map(function(a){ return '<label class="chk"><input type="checkbox" id="u-app-' + a.id + '" name="apps" value="' + a.id + '"> ' + esc(a.name) + '</label>'; }).join('') + '</div></div>' +
+    '<div class="field"><label for="u-team">Equipo</label><select id="u-team" name="team" class="inp">' + teamOptions(TEAMS[0] ? TEAMS[0].id : '') + '</select><div class="hint">Verá las apps de su equipo. Si necesita alguna más, márcala abajo.</div></div>' +
+    '<div class="field"><span class="fl-label">Apps extra, solo para esta persona (opcional)</span><div>' + APPS.filter(function(a){ return a.active; }).map(function(a){ return '<label class="chk"><input type="checkbox" id="u-app-' + a.id + '" name="apps" value="' + a.id + '"> ' + esc(a.name) + '</label>'; }).join('') + '</div></div>' +
     '<div class="two"><div class="field"><label for="u-admin">Rol</label><select id="u-admin" name="admin" class="inp"><option value="0">Usuario</option><option value="1">Administrador (ve y gestiona todo)</option></select></div><div class="field"><label for="u-expires">Caduca (opcional)</label><input type="text" id="u-expires" name="expires" placeholder="dd/mm/aaaa"></div></div>' +
     '</div></form><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Añadir</button></div>');
   $('#msave').onclick = function(){
@@ -961,9 +1082,48 @@ function newUser(){
     if (USERS.some(function(u){ return u.email === email; })) { toast('Esa persona ya está'); return; }
     var name = (fd.get('name') || '').trim() || email.split('@')[0].split('.').map(function(p){ return p.charAt(0).toUpperCase() + p.slice(1); }).join(' ');
     var isAdmin = fd.get('admin') === '1';
-    USERS.push({ email:email, name:name, admin:isAdmin, apps:isAdmin ? '*' : fd.getAll('apps'), expires:(fd.get('expires') || '').trim() || undefined, last:'—' });
+    var team = fd.get('team') || ''; var tm = teamById(team); var extra = fd.getAll('apps').filter(function(id){ return !tm || tm.apps.indexOf(id) < 0; });
+    USERS.push({ email:email, name:name, admin:isAdmin, team:team, extra:extra, expires:(fd.get('expires') || '').trim() || undefined, last:'—' });
     closeModal(); toast('Persona añadida'); render();
   };
+}
+
+/* ----- Equipos y avisos ----- */
+function newTeam(){
+  openModal('<h2>Nuevo equipo</h2><div class="mut sm">Después eliges sus apps en Equipos y le asignas personas en Personas.</div><form id="mform"><div class="fields"><div class="field"><label for="t-name">Nombre</label><input type="text" id="t-name" name="name" maxlength="40" placeholder="Por ejemplo: Inversión"></div></div></form><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Crear</button></div>');
+  $('#msave').onclick = function(){ var name = (new FormData($('#mform')).get('name') || '').trim(); if (!name) { toast('Falta el nombre'); return; }
+    if (TEAMS.some(function(t){ return t.name.toLowerCase() === name.toLowerCase(); })) { toast('Ya hay un equipo con ese nombre'); return; }
+    TEAMS.push({ id:'t' + Date.now(), name:name, apps:[] }); closeModal(); toast('Equipo creado'); render(); };
+}
+function removeTeam(id){
+  var t = teamById(id); if (!t) return; var n = USERS.filter(function(u){ return u.team === id; }).length;
+  openModal('<h2>Quitar «' + esc(t.name) + '»</h2><div class="mut sm">' + (n ? 'Sus ' + n + ' personas se quedan sin equipo y dejan de ver las apps que tenían por él (no las que se les dieron una a una).' : 'No tiene personas.') + '</div><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Quitar</button></div>');
+  $('#msave').onclick = function(){ TEAMS.splice(TEAMS.indexOf(t), 1); USERS.forEach(function(u){ if (u.team === id) u.team = ''; }); NOTICES.forEach(function(x){ if (x.team === id) x.team = ''; }); closeModal(); toast('Equipo quitado'); render(); };
+}
+function noticeForm(n){
+  n = n || { text:'', app:'', team:'', until:'' };
+  return '<form id="mform"><div class="fields">' +
+    '<div class="field"><label for="n-text">Texto</label><textarea id="n-text" name="text" maxlength="200" placeholder="Lo que quieres que vea el equipo al entrar">' + esc(n.text) + '</textarea></div>' +
+    '<div class="two"><div class="field"><label for="n-team">Para</label><select id="n-team" name="team" class="inp"><option value="">Todo el mundo</option>' + TEAMS.map(function(t){ return '<option value="' + t.id + '"' + (n.team === t.id ? ' selected' : '') + '>' + esc(t.name) + '</option>'; }).join('') + '</select></div>' +
+    '<div class="field"><label for="n-app">App relacionada (opcional)</label><select id="n-app" name="app" class="inp"><option value="">Ninguna</option>' + APPS.filter(function(a){ return a.active; }).map(function(a){ return '<option value="' + a.id + '"' + (n.app === a.id ? ' selected' : '') + '>' + esc(a.name) + '</option>'; }).join('') + '</select></div></div>' +
+    '<div class="field"><label for="n-until">Visible hasta</label><input type="date" id="n-until" name="until" value="' + esc(n.until) + '" min="' + todayISO() + '"></div>' +
+    '<div class="hint">Si eliges una app, el aviso lleva un enlace para abrirla (solo a quien tenga acceso).</div></div></form>';
+}
+function readNoticeForm(){ var fd = new FormData($('#mform')); var d = { text:(fd.get('text') || '').trim(), team:fd.get('team') || '', app:fd.get('app') || '', until:fd.get('until') || '' };
+  if (!d.text) { toast('Falta el texto'); return null; } if (!/^\d{4}-\d{2}-\d{2}$/.test(d.until)) { toast('Pon hasta qué día se ve'); return null; } return d; }
+function newNotice(){
+  openModal('<h2>Nuevo aviso</h2><div class="mut sm">Sale arriba en el inicio de quien elijas hasta la fecha que pongas.</div>' + noticeForm() + '<div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Publicar aviso</button></div>');
+  $('#msave').onclick = function(){ var d = readNoticeForm(); if (!d) return; d.id = 'n' + Date.now(); NOTICES.unshift(d); closeModal(); toast('Aviso publicado'); render(); };
+}
+function editNotice(id){
+  var n = NOTICES.filter(function(x){ return x.id === id; })[0]; if (!n) return;
+  openModal('<h2>Editar aviso</h2>' + noticeForm(n) + '<div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Guardar</button></div>');
+  $('#msave').onclick = function(){ var d = readNoticeForm(); if (!d) return; n.text = d.text; n.team = d.team; n.app = d.app; n.until = d.until; closeModal(); toast('Guardado'); render(); };
+}
+function removeNotice(id){
+  var n = NOTICES.filter(function(x){ return x.id === id; })[0]; if (!n) return;
+  openModal('<h2>Quitar el aviso</h2><div class="mut sm">Deja de salir en el inicio de todo el mundo.</div><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Quitar</button></div>');
+  $('#msave').onclick = function(){ NOTICES.splice(NOTICES.indexOf(n), 1); closeModal(); toast('Aviso quitado'); render(); };
 }
 
 /* ----- Eventos ----- */
@@ -976,24 +1136,34 @@ document.addEventListener('click', function(e){
     if (pi >= 0) pp.pins.splice(pi, 1); else pp.pins.push(pid); var okp = savePrefs(); render(); toast((pi >= 0 ? 'Quitada de fijadas' : 'Fijada en la barra lateral') + (okp ? '' : ' (este navegador no deja guardarlo)')); return; }
   if (e.target.closest('#sideBackdrop')) { toggleSidebar(false); return; }
   var t = e.target.closest('[data-tab]'); if (t) { e.preventDefault(); document.body.classList.remove('side-open'); paintMenuBtn(); STATE.tab = t.getAttribute('data-tab'); STATE.q = ''; render(); $('#content').scrollTop = 0; return; }
-  var g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); var go = g.getAttribute('data-go'); if (go === 'app-new') newApp(); else if (go === 'link-new') newLink(); else newUser(); return; }
+  var g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); var go = g.getAttribute('data-go'); if (go === 'app-new') newApp(); else if (go === 'link-new') newLink(); else if (go === 'team-new') newTeam(); else if (go === 'notice-new') newNotice(); else newUser(); return; }
+  var av = e.target.closest('[data-accview]'); if (av) { STATE.accView = av.getAttribute('data-accview'); STATE.q = ''; render(); return; }
+  var tt = e.target.closest('[data-team-toggle]'); if (tt) { var tp = tt.getAttribute('data-team-toggle').split('|'), tm = teamById(tp[0]); if (!tm) return; var ti = tm.apps.indexOf(tp[1]);
+    if (ti >= 0) tm.apps.splice(ti, 1); else tm.apps.push(tp[1]); toast((ti >= 0 ? 'Quitada a ' : 'Dada a ') + tm.name + ' (' + (function(n){ return n + (n === 1 ? ' persona' : ' personas'); })(USERS.filter(function(u){ return u.team === tm.id; }).length) + ')'); render(); return; }
+  var trm = e.target.closest('[data-team-remove]'); if (trm) { removeTeam(trm.getAttribute('data-team-remove')); return; }
+  var vt = e.target.closest('[data-viateam]'); if (vt) { toast('La tiene por su equipo (' + vt.getAttribute('data-viateam') + '). Cámbialo en Equipos'); return; }
+  var ds = e.target.closest('[data-dismiss]'); if (ds) { var dp = prefsOf(viewer()); dp.dismissed.push(ds.getAttribute('data-dismiss')); savePrefs(); render(); toast('Aviso cerrado'); return; }
+  var ne = e.target.closest('[data-notice-edit]'); if (ne) { editNotice(ne.getAttribute('data-notice-edit')); return; }
+  var nr = e.target.closest('[data-notice-remove]'); if (nr) { removeNotice(nr.getAttribute('data-notice-remove')); return; }
   var le = e.target.closest('[data-link-edit]'); if (le) { editLink(le.getAttribute('data-link-edit')); return; }
   var lr = e.target.closest('[data-link-remove]'); if (lr) { removeLink(lr.getAttribute('data-link-remove')); return; }
   if (e.target.closest('[data-close]') || e.target === $('#modalBg')) { closeModal(); return; }
   var tg = e.target.closest('[data-toggle]');
   if (tg) { var p = tg.getAttribute('data-toggle').split('|'); var u = USERS.filter(function(x){ return x.email === p[0]; })[0]; if (!u || u.admin) return;
-    var i = u.apps.indexOf(p[1]); if (i >= 0) u.apps.splice(i, 1); else u.apps.push(p[1]); toast(i >= 0 ? 'Acceso retirado' : 'Acceso concedido'); render(); return; }
+    u.extra = u.extra || []; var i = u.extra.indexOf(p[1]); if (i >= 0) u.extra.splice(i, 1); else u.extra.push(p[1]); toast(i >= 0 ? 'Acceso retirado' : 'Acceso concedido solo a ' + u.name.split(' ')[0]); render(); return; }
   var ad = e.target.closest('[data-admin]');
   if (ad) { var u2 = USERS.filter(function(x){ return x.email === ad.getAttribute('data-admin'); })[0]; if (!u2) return;
     if (u2.admin && USERS.filter(function(x){ return x.admin; }).length === 1) { toast('Tiene que quedar al menos un administrador'); return; }
-    u2.admin = !u2.admin; u2.apps = u2.admin ? '*' : APPS.map(function(a){ return a.id; }); toast(u2.admin ? 'Ahora es administrador' : 'Ahora es usuario'); render(); return; }
+    u2.admin = !u2.admin; toast(u2.admin ? 'Ahora es administrador' : 'Ahora es usuario: ve lo de su equipo'); render(); return; }
   var ac = e.target.closest('[data-active]'); if (ac) { var a = appById(ac.getAttribute('data-active')); if (a) { a.active = !a.active; toast(a.active ? 'Visible en el inicio' : 'Oculta del inicio'); render(); } return; }
   var ed = e.target.closest('[data-edit]'); if (ed) { editApp(ed.getAttribute('data-edit')); return; }
   var rm = e.target.closest('[data-remove]'); if (rm) { removeApp(rm.getAttribute('data-remove')); return; }
   if (e.target.closest('#logoutBtn')) { STATE.tab = 'home'; $('#gate').classList.add('open'); return; }
 });
 document.addEventListener('input', function(e){ if (e.target.id === 'q') { STATE.q = e.target.value; render(); } });
-document.addEventListener('change', function(e){ if (e.target.id === 'viewer') { STATE.viewer = e.target.value; STATE.tab = 'home'; document.body.classList.remove('side-open'); paintMenuBtn(); render(); toast('Viendo como ' + viewer().name); } });
+document.addEventListener('change', function(e){ var tof = e.target.getAttribute && e.target.getAttribute('data-team-of');
+  if (tof) { var tu = USERS.filter(function(x){ return x.email === tof; })[0]; if (tu) { tu.team = e.target.value; var nt = teamById(tu.team); toast(tu.name.split(' ')[0] + (nt ? ' pasa a ' + nt.name : ' se queda sin equipo')); render(); } return; }
+  if (e.target.id === 'viewer') { STATE.viewer = e.target.value; STATE.tab = 'home'; document.body.classList.remove('side-open'); paintMenuBtn(); render(); toast('Viendo como ' + viewer().name); } });
 document.addEventListener('keydown', function(e){
   if ((e.ctrlKey || e.metaKey) && !e.altKey && (e.key === 'k' || e.key === 'K')) { e.preventDefault(); if (CMDK) closeCmdk(); else openCmdk(); return; }
   if (CMDK) { if (e.key === 'Escape') closeCmdk(); return; }
