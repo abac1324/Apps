@@ -235,6 +235,32 @@ textarea:focus,input:focus,select:focus{outline:none;border-color:var(--navy);bo
 .appcard.add b{font-weight:700;color:var(--ink);display:block}
 .appcard.add span{font-size:12px}
 
+/* ---------- Portal: «Mis apps» (enlaces externos propios de cada persona; solo los ve ella) ---------- */
+.res-sub{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:26px 0 12px;display:flex;align-items:center;gap:8px}
+.res-sub:after{content:"";flex:1;height:1px;background:var(--line)}
+.res-sub:first-child{margin-top:0}
+.res-sub .res-note{font-weight:500;text-transform:none;letter-spacing:0;color:var(--faint)}
+.apps.mine{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.mycard{position:relative;display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-sm);min-width:0;transition:background var(--d2),border-color var(--d2),transform var(--d1) var(--ease),box-shadow var(--d2)}
+.mycard:hover{transform:translateY(-2px);border-color:#c7cdd9;box-shadow:0 1px 2px rgba(14,33,80,.05),0 10px 24px rgba(14,33,80,.08)}
+.mycard:active{transform:scale(.985)}
+.mycard .cover{position:absolute;inset:0;border-radius:inherit;z-index:1}
+.mycard .cover:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.mycard .lt{width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:var(--info-soft);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:14px}
+.mycard .tx{flex:1;min-width:0}
+.mycard .tx b{display:block;color:var(--ink);font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mycard .tx span{display:block;color:var(--muted);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.mycard .acts{position:absolute;right:8px;top:50%;transform:translateY(-50%);z-index:2;display:flex;gap:2px;padding-left:8px;background:linear-gradient(90deg,rgba(255,255,255,0),var(--card) 8px);opacity:0;pointer-events:none;transition:opacity var(--d2) var(--ease)}
+.mycard:hover .acts,.mycard:focus-within .acts{opacity:1;pointer-events:auto}
+@media(hover:none){.mycard .acts{position:relative;right:auto;top:auto;transform:none;padding-left:0;background:none;opacity:1;pointer-events:auto}}
+.icobtn{width:30px;height:30px;padding:0;justify-content:center;border-color:transparent;background:transparent;color:var(--muted)}
+.icobtn:hover{background:var(--cell);border-color:var(--line);color:var(--ink)}
+.icobtn .ti{font-size:15px}
+.mycard.add{border-style:dashed;background:transparent;box-shadow:none;color:var(--muted);cursor:pointer;font-family:inherit;text-align:left;width:100%}
+.mycard.add:hover{background:#fff;color:var(--ink)}
+.mycard.add .lt{background:var(--cell);color:var(--navy)}
+.nav a .lt{width:20px;height:20px;flex:0 0 20px;border-radius:6px;background:#dfe2e8;color:var(--ink);display:grid;place-items:center;font-size:10.5px;font-weight:800}
+
 /* ---------- Portal: accesos y catálogo ---------- */
 .person{display:flex;align-items:center;gap:10px;min-width:220px}
 .person b{display:block;color:var(--ink);font-weight:700}
@@ -346,7 +372,7 @@ body.side-init .sidebar{transition:none}
     <div class="sp"></div>
     <div id="topact"></div>
   </div>
-  <div class="content" id="content"><!--STATIC:content--><div class="page"><div class="row" style="margin-bottom:22px;gap:14px;align-items:flex-start"><div class="avatar lg">HM</div><div><div class="hd">Hola, Hugo</div><div class="mut">Tienes acceso a 3 aplicaciones. Se abren con tu sesión de Microsoft, sin volver a escribir la contraseña.</div></div></div><div class="apps stagger"><a class="appcard" href="https://abac1324.github.io/Dashboard/" target="_blank" rel="noopener"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-chart-histogram"/></svg></div><div><div class="an">Portfolio Hub</div><div class="ad">Dashboard de cartera de los fondos: Fund Overview, Performance, Valuation, Sustainability y Risk.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></a><a class="appcard" href="https://abac1324.github.io/RRHH/" target="_blank" rel="noopener"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-users"/></svg></div><div><div class="an">RRHH · Evaluaciones</div><div class="ad">Evaluaciones de desempeño: cascada de junio y 360 de diciembre.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></a><a class="appcard" href="https://abac1324.github.io/Staffing/" target="_blank" rel="noopener"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-clock-hour-4"/></svg></div><div><div class="an">Staffing · Registro de horas</div><div class="ad">Previsión y horas reales por semana y proyecto. Capacidad del equipo.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></a><a class="appcard add" href="#" data-go="app-new"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></div><div><b>Añadir aplicación</b><span>Una fila en el catálogo, sin tocar código</span></div></a></div></div><!--/STATIC:content--></div>
+  <div class="content" id="content"><!--STATIC:content--><div class="page"><div class="row" style="margin-bottom:22px;gap:14px;align-items:flex-start"><div class="avatar lg">HM</div><div><div class="hd">Hola, Hugo</div><div class="mut">Tienes acceso a 3 aplicaciones. Se abren con tu sesión de Microsoft, sin volver a escribir la contraseña.</div></div></div><div class="res-sub">Aplicaciones de Abac</div><div class="apps stagger"><a class="appcard" href="https://abac1324.github.io/Dashboard/" target="_blank" rel="noopener"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-chart-histogram"/></svg></div><div><div class="an">Portfolio Hub</div><div class="ad">Dashboard de cartera de los fondos: Fund Overview, Performance, Valuation, Sustainability y Risk.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></a><a class="appcard" href="https://abac1324.github.io/RRHH/" target="_blank" rel="noopener"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-users"/></svg></div><div><div class="an">RRHH · Evaluaciones</div><div class="ad">Evaluaciones de desempeño: cascada de junio y 360 de diciembre.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></a><a class="appcard" href="https://abac1324.github.io/Staffing/" target="_blank" rel="noopener"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-clock-hour-4"/></svg></div><div><div class="an">Staffing · Registro de horas</div><div class="ad">Previsión y horas reales por semana y proyecto. Capacidad del equipo.</div></div><div class="ao">Abrir <svg class="ti" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div></a><a class="appcard add" href="#" data-go="app-new"><div class="appicon"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></div><div><b>Añadir al catálogo</b><span>Para el equipo, sin tocar código</span></div></a></div><div class="res-sub">Mis apps <span class="res-note">· solo las ves tú</span></div><div class="apps mine stagger"><button type="button" class="mycard add" data-go="link-new"><span class="lt"><svg class="ti" aria-hidden="true"><use href="#i-plus"/></svg></span><span class="tx"><b>Añadir a mis apps</b><span>Cualquier web externa, con el nombre que quieras</span></span></button></div></div><!--/STATIC:content--></div>
   <div class="footer">
     <div class="fl">Abac · Portal de aplicaciones<span class="svi">SUSTAINABLE VALUE INVESTING</span></div>
     <div class="fr">© 2026 Abac Capital · Confidential · Internal use only</div>
@@ -393,6 +419,18 @@ var TABS = [
   { id:'apps', label:'Catálogo de apps', icon:'apps', title:'Abac — Catálogo de aplicaciones', admin:true }
 ];
 var STATE = { viewer: USERS[0].email, tab:'home', q:'' };
+/* «Mis apps»: enlaces externos que cada persona añade para sí misma (nombre + dirección); solo los ve ella.
+   En la maqueta se guardan en este navegador, por persona (localStorage). En la app real irán a la tabla user_links con RLS
+   (cada uno lee y escribe solo sus filas; ver COMO_FUNCIONARIA.md §5). */
+var MYLINKS_KEY = 'abac_portal_mis_apps';
+var MYLINKS = {};
+function loadMyLinks(){ try { MYLINKS = JSON.parse(root.localStorage.getItem(MYLINKS_KEY) || '{}') || {}; } catch (e) { MYLINKS = {}; } }
+function saveMyLinks(){ try { root.localStorage.setItem(MYLINKS_KEY, JSON.stringify(MYLINKS)); return true; } catch (e) { return false; } }
+function myLinks(u){ return MYLINKS[u.email] || []; }
+function hostOf(url){ var m = String(url).match(/^https?:\/\/([^\/?#]+)/i); return m ? m[1].replace(/^www\./, '') : url; }
+/* Solo direcciones web: si falta, se pone https://; se rechaza cualquier otra cosa (javascript:, mailto:…) */
+function normUrl(v){ v = String(v || '').trim(); if (!v) return ''; if (!/^[a-z][a-z0-9+.-]*:/i.test(v)) v = 'https://' + v;
+  return /^https?:\/\/[^\s\/?#]+\.[^\s\/?#]+/i.test(v) ? v : ''; }
 
 /* ===== Utilidades puras ===== */
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
@@ -409,12 +447,21 @@ function navHTML(){
   var u = viewer(); var html = '<div class="grp">Aplicaciones</div>';
   TABS.forEach(function(t){
     if (t.admin && !u.admin) return;
-    if (t.grp) html += '<div class="grp">' + esc(t.grp) + '</div>';
+    if (t.grp) {
+      var ml = myLinks(u);
+      if (ml.length) html += '<div class="grp">Mis apps</div>' + ml.map(function(l){
+        return '<a class="appnav" href="' + esc(l.url) + '" target="_blank" rel="noopener" title="Abrir ' + esc(l.name) + ' en una pestaña nueva">' + '<span class="lt">' + esc(l.name.charAt(0).toUpperCase()) + '</span><span class="nl">' + esc(l.name) + '</span>' + ic('arrow-up-right').replace('class="ti"', 'class="ti ext"') + '</a>';
+      }).join('');
+      html += '<div class="grp">' + esc(t.grp) + '</div>';
+    }
     html += '<a href="#" class="' + (STATE.tab === t.id ? 'active' : '') + '" data-tab="' + t.id + '">' + ic(t.icon) + esc(t.label) + '</a>';
     if (t.id === 'home') html += visibleApps(u).map(function(a){
       return '<a class="appnav" href="' + esc(a.url) + '" target="_blank" rel="noopener" title="Abrir ' + esc(a.name) + ' en una pestaña nueva">' + ic(a.icon) + '<span class="nl">' + esc(a.name) + '</span>' + ic('arrow-up-right').replace('class="ti"', 'class="ti ext"') + '</a>';
     }).join('');
   });
+  if (!u.admin && myLinks(u).length) html += '<div class="grp">Mis apps</div>' + myLinks(u).map(function(l){
+    return '<a class="appnav" href="' + esc(l.url) + '" target="_blank" rel="noopener" title="Abrir ' + esc(l.name) + ' en una pestaña nueva">' + '<span class="lt">' + esc(l.name.charAt(0).toUpperCase()) + '</span><span class="nl">' + esc(l.name) + '</span>' + ic('arrow-up-right').replace('class="ti"', 'class="ti ext"') + '</a>';
+  }).join('');
   return html;
 }
 function userboxHTML(){
@@ -426,14 +473,16 @@ function userboxHTML(){
 }
 function topactHTML(){
   return STATE.tab === 'access' ? '<button class="btn pri" type="button" data-go="user-new" title="Añadir persona">' + ic('user-plus') + '<span class="lbl">Añadir persona</span></button>'
-       : STATE.tab === 'apps' ? '<button class="btn pri" type="button" data-go="app-new" title="Nueva aplicación">' + ic('plus') + '<span class="lbl">Nueva aplicación</span></button>' : '';
+       : STATE.tab === 'apps' ? '<button class="btn pri" type="button" data-go="app-new" title="Nueva aplicación">' + ic('plus') + '<span class="lbl">Nueva aplicación</span></button>'
+       : '<button class="btn" type="button" data-go="link-new" title="Añadir a mis apps">' + ic('plus') + '<span class="lbl">Añadir a mis apps</span></button>';
 }
 function homeHTML(){
   var u = viewer(); var apps = visibleApps(u); var first = u.name.split(' ')[0];
   var html = '<div class="row" style="margin-bottom:22px;gap:14px;align-items:flex-start"><div class="avatar lg">' + esc(ini(u.name)) + '</div><div><div class="hd">Hola, ' + esc(first) + '</div><div class="mut">' +
     (apps.length ? 'Tienes acceso a ' + apps.length + (apps.length === 1 ? ' aplicación' : ' aplicaciones') + '. Se abren con tu sesión de Microsoft, sin volver a escribir la contraseña.' : 'Todavía no tienes aplicaciones asignadas.') + '</div></div></div>';
+  html += '<div class="res-sub">Aplicaciones de Abac</div>';
   if (!apps.length && !u.admin) {
-    return html + '<div class="card"><div class="empty"><div class="ic">' + ic('lock') + '</div><div class="t">Sin aplicaciones asignadas</div><div class="d">Un administrador tiene que darte acceso. Escribe a hugo.mengual@abaccapital.com.</div></div></div>';
+    return html + '<div class="card"><div class="empty"><div class="ic">' + ic('lock') + '</div><div class="t">Sin aplicaciones asignadas</div><div class="d">Un administrador tiene que darte acceso. Escribe a hugo.mengual@abaccapital.com.</div></div></div>' + myLinksHTML(u);
   }
   html += '<div class="apps stagger">' + apps.map(function(a){
     return '<a class="appcard" href="' + esc(a.url) + '" target="_blank" rel="noopener">' +
@@ -441,9 +490,19 @@ function homeHTML(){
       '<div><div class="an">' + esc(a.name) + '</div><div class="ad">' + esc(a.desc) + '</div></div>' +
       '<div class="ao">Abrir ' + ic('arrow-up-right') + (a.kind === 'externa' ? '<span class="pill gray">Externa</span>' : '') + '</div></a>';
   }).join('') +
-  (u.admin ? '<a class="appcard add" href="#" data-go="app-new"><div class="appicon">' + ic('plus') + '</div><div><b>Añadir aplicación</b><span>Una fila en el catálogo, sin tocar código</span></div></a>' : '') +
+  (u.admin ? '<a class="appcard add" href="#" data-go="app-new"><div class="appicon">' + ic('plus') + '</div><div><b>Añadir al catálogo</b><span>Para el equipo, sin tocar código</span></div></a>' : '') +
   '</div>';
-  return html;
+  return html + myLinksHTML(u);
+}
+function myLinksHTML(u){
+  var ml = myLinks(u);
+  return '<div class="res-sub">Mis apps <span class="res-note">· solo las ves tú</span></div><div class="apps mine stagger">' + ml.map(function(l){
+    return '<div class="mycard"><a class="cover" href="' + esc(l.url) + '" target="_blank" rel="noopener" aria-label="Abrir ' + esc(l.name) + '"></a>' +
+      '<span class="lt">' + esc(l.name.charAt(0).toUpperCase()) + '</span><span class="tx"><b>' + esc(l.name) + '</b><span>' + esc(hostOf(l.url)) + '</span></span>' +
+      '<span class="acts"><button type="button" class="btn icobtn" data-link-edit="' + esc(l.id) + '" title="Editar" aria-label="Editar ' + esc(l.name) + '">' + ic('pencil') + '</button>' +
+      '<button type="button" class="btn icobtn" data-link-remove="' + esc(l.id) + '" title="Quitar" aria-label="Quitar ' + esc(l.name) + '">' + ic('x') + '</button></span></div>';
+  }).join('') +
+  '<button type="button" class="mycard add" data-go="link-new"><span class="lt">' + ic('plus') + '</span><span class="tx"><b>Añadir a mis apps</b><span>' + (ml.length ? 'Otro enlace con el nombre que quieras' : 'Cualquier web externa, con el nombre que quieras') + '</span></span></button></div>';
 }
 function accessHTML(){
   var q = STATE.q.toLowerCase(); var apps = APPS.filter(function(a){ return a.active; });
@@ -489,6 +548,7 @@ if (typeof document === 'undefined') return;
 
 /* ===== A partir de aquí, solo en el navegador ===== */
 function $(s){ return document.querySelector(s); }
+loadMyLinks();
 
 /* Alto del lienzo = alto visible de verdad (Safari en iPad: «vh» incluye lo que tapan sus barras). Ver el CSS de body. */
 (function(){ var setH = function(){ document.documentElement.style.setProperty('--app-h', (window.visualViewport ? window.visualViewport.height : window.innerHeight) + 'px'); };
@@ -616,6 +676,35 @@ function removeApp(id){
   openModal('<h2>Quitar «' + esc(a.name) + '»</h2><div class="mut sm">Desaparece del catálogo y del inicio de todo el mundo. Si solo quieres esconderla un tiempo, usa el interruptor de visible.</div><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Quitar</button></div>');
   $('#msave').onclick = function(){ APPS.splice(APPS.indexOf(a), 1); USERS.forEach(function(u){ if (Array.isArray(u.apps)) { var i = u.apps.indexOf(a.id); if (i >= 0) u.apps.splice(i, 1); } }); closeModal(); toast('Aplicación quitada'); render(); };
 }
+function linkForm(l){
+  l = l || { name:'', url:'' };
+  return '<form id="mform"><div class="fields">' +
+    '<div class="field"><label for="l-name">Nombre</label><input type="text" id="l-name" name="name" maxlength="40" value="' + esc(l.name) + '" placeholder="Como quieras llamarla"></div>' +
+    '<div class="field"><label for="l-url">Dirección (URL)</label><input type="text" id="l-url" name="url" value="' + esc(l.url) + '" placeholder="https://…" autocomplete="off" inputmode="url"></div>' +
+    '<div class="hint">Solo la ves tú y se abre en otra pestaña. Es un enlace: entras con el acceso que ya tengas en esa web.</div></div></form>';
+}
+function readLinkForm(){
+  var fd = new FormData($('#mform')); var name = (fd.get('name') || '').trim(); var url = normUrl(fd.get('url'));
+  if (!name) { toast('Falta el nombre'); return null; }
+  if (!url) { toast('La dirección no es válida (ejemplo: https://www.google.com)'); return null; }
+  return { name:name, url:url };
+}
+function afterLinkSave(msg){ var ok = saveMyLinks(); closeModal(); toast(ok ? msg : msg + ' (este navegador no deja guardarlo: se pierde al recargar)'); render(); }
+function newLink(){
+  openModal('<h2>Añadir a mis apps</h2><div class="mut sm">Un enlace a cualquier web, con el nombre que quieras. Aparecerá en tu inicio y en la barra lateral.</div>' + linkForm() + '<div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Añadir</button></div>');
+  $('#msave').onclick = function(){ var d = readLinkForm(); if (!d) return; var u = viewer(); (MYLINKS[u.email] = MYLINKS[u.email] || []).push({ id:'l' + Date.now(), name:d.name, url:d.url }); STATE.tab = 'home'; afterLinkSave('Añadida a tus apps'); };
+}
+function findLink(id){ return myLinks(viewer()).filter(function(l){ return l.id === id; })[0]; }
+function editLink(id){
+  var l = findLink(id); if (!l) return;
+  openModal('<h2>Editar «' + esc(l.name) + '»</h2>' + linkForm(l) + '<div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Guardar</button></div>');
+  $('#msave').onclick = function(){ var d = readLinkForm(); if (!d) return; l.name = d.name; l.url = d.url; afterLinkSave('Guardado'); };
+}
+function removeLink(id){
+  var l = findLink(id); if (!l) return;
+  openModal('<h2>Quitar «' + esc(l.name) + '»</h2><div class="mut sm">Desaparece de tus apps. La web no se toca; puedes volver a añadirla cuando quieras.</div><div class="acts"><button class="btn" type="button" data-close>Cancelar</button><button class="btn pri" type="button" id="msave">Quitar</button></div>');
+  $('#msave').onclick = function(){ var arr = myLinks(viewer()); arr.splice(arr.indexOf(l), 1); afterLinkSave('Quitada de tus apps'); };
+}
 function newUser(){
   openModal('<h2>Añadir persona</h2><div class="mut sm">Entra con su cuenta de Microsoft; no hay contraseñas que crear ni enviar.</div><form id="mform"><div class="fields">' +
     '<div class="two"><div class="field"><label for="u-name">Nombre</label><input type="text" id="u-name" name="name" placeholder="Nombre y apellido"></div><div class="field"><label for="u-email">Correo de Abac</label><input type="email" id="u-email" name="email" placeholder="nombre.apellido@abaccapital.com"></div></div>' +
@@ -638,7 +727,9 @@ document.addEventListener('click', function(e){
   if (e.target.closest('#btnMenu')) { toggleSidebar(); return; }
   if (e.target.closest('#sideBackdrop')) { toggleSidebar(false); return; }
   var t = e.target.closest('[data-tab]'); if (t) { e.preventDefault(); document.body.classList.remove('side-open'); paintMenuBtn(); STATE.tab = t.getAttribute('data-tab'); STATE.q = ''; render(); $('#content').scrollTop = 0; return; }
-  var g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); if (g.getAttribute('data-go') === 'app-new') newApp(); else newUser(); return; }
+  var g = e.target.closest('[data-go]'); if (g) { e.preventDefault(); var go = g.getAttribute('data-go'); if (go === 'app-new') newApp(); else if (go === 'link-new') newLink(); else newUser(); return; }
+  var le = e.target.closest('[data-link-edit]'); if (le) { editLink(le.getAttribute('data-link-edit')); return; }
+  var lr = e.target.closest('[data-link-remove]'); if (lr) { removeLink(lr.getAttribute('data-link-remove')); return; }
   if (e.target.closest('[data-close]') || e.target === $('#modalBg')) { closeModal(); return; }
   var tg = e.target.closest('[data-toggle]');
   if (tg) { var p = tg.getAttribute('data-toggle').split('|'); var u = USERS.filter(function(x){ return x.email === p[0]; })[0]; if (!u || u.admin) return;
@@ -654,7 +745,8 @@ document.addEventListener('click', function(e){
 });
 document.addEventListener('input', function(e){ if (e.target.id === 'q') { STATE.q = e.target.value; render(); } });
 document.addEventListener('change', function(e){ if (e.target.id === 'viewer') { STATE.viewer = e.target.value; STATE.tab = 'home'; document.body.classList.remove('side-open'); paintMenuBtn(); render(); toast('Viendo como ' + viewer().name); } });
-document.addEventListener('keydown', function(e){ if (e.key !== 'Escape') return; if (SELMENU) { closeSelMenu(); return; } if ($('#modalBg').classList.contains('open')) closeModal(); else if (document.body.classList.contains('side-open')) toggleSidebar(false); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Enter' && !SELMENU && e.target.matches && e.target.matches('#modal input[type=text], #modal input[type=email]')) { e.preventDefault(); var ms = $('#msave'); if (ms) ms.click(); return; }
+  if (e.key !== 'Escape') return; if (SELMENU) { closeSelMenu(); return; } if ($('#modalBg').classList.contains('open')) closeModal(); else if (document.body.classList.contains('side-open')) toggleSidebar(false); });
 document.addEventListener('submit', function(e){ e.preventDefault(); var s = $('#msave'); if (s) s.click(); });
 $('#msBtn').addEventListener('click', function(){
   var b = $('#msBtn'); b.disabled = true; $('#msTxt').innerHTML = '<span class="spin"></span> Conectando con Microsoft…';
